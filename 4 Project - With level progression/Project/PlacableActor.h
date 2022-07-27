@@ -7,9 +7,11 @@ enum class ActorColor
 	Blue = 9,
 	Green = 10,
 	Red = 12,
+	Yellow = 11,
 	SolidGreen = 34,
 	SolidRed = 68,
-	SolidBlue = 153
+	SolidBlue = 153,
+	SolidYellow = 152
 };
 
 enum class ActorType
@@ -19,7 +21,8 @@ enum class ActorType
 	Goal,
 	Key,
 	Money,
-	Player
+	Player,
+	Life
 };
 
 class PlacableActor

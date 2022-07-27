@@ -13,6 +13,7 @@
 #include "AudioManager.h"
 #include "Utility.h"
 #include "StateMachineExampleGame.h"
+#include "Life.h"
 
 using namespace std;
 
@@ -223,6 +224,17 @@ void GameplayState::HandleCollision(int newPlayerX, int newPlayerY)
 			m_beatLevel = true;
 			break;
 		}
+		case ActorType::Life:
+		{
+			Life* collidedLife = dynamic_cast<Life*>(collidedActor);
+			assert(collidedLife);
+			//AudioManager::GetInstance()->PlayMoneySound();
+			collidedLife->Remove();
+			m_player.IncrementLife(1);
+			m_player.SetPosition(newPlayerX, newPlayerY);
+			break;
+		}
+		
 		default:
 			break;
 		}

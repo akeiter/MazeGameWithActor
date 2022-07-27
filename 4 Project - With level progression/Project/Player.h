@@ -16,8 +16,8 @@ public:
 	Key* GetKey() { return m_pCurrentKey; }
 
 	void AddMoney(int money) { m_money += money; }
+	void IncrementLife(int lives) { m_lives += lives; }
 	int GetMoney() { return m_money; }
-
 	int GetLives() { return m_lives; }
 	void DecrementLives() { m_lives--; }
 

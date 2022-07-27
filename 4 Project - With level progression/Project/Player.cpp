@@ -53,5 +53,5 @@ void Player::DropKey()
 
 void Player::Draw()
 {
-	cout << "@";
+	cout << "#";
 }
